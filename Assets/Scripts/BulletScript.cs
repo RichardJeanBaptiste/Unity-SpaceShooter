@@ -24,7 +24,15 @@ public class BulletScript : MonoBehaviour
     }
 
      void OnTriggerEnter2D(Collider2D other){
-         Destroy(GameObject.FindGameObjectWithTag("Bullet"));
-         Destroy(other.gameObject);
+         
+         if(other.gameObject.tag == "Player"){
+             // do nothing
+         }else if(other.gameObject.tag == "Gun"){
+             //do nothing
+         }else{
+             
+             //Destroy(other.gameObject);
+             Destroy(GameObject.FindGameObjectWithTag("Bullet"));
+         }
      }
 }

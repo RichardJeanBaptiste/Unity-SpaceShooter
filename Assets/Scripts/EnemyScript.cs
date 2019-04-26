@@ -7,6 +7,8 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     public float speed;
     public bool move;
+
+    public int HitPoints;
     void Start()
     {
         
@@ -33,4 +35,13 @@ public class EnemyScript : MonoBehaviour
        }
 
    }
+
+   void OnTriggerEnter2D(Collider2D other)
+   {
+       HitPoints--;
+       if(HitPoints <= 0){
+           Destroy(gameObject);
+       }
+   }
+   
 }

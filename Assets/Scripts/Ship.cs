@@ -6,6 +6,7 @@ public class Ship : MonoBehaviour
 {
     public float speed;
 
+    public int hitPoints;
     
     // Start is called before the first frame update
     void Start()
@@ -30,5 +31,13 @@ public class Ship : MonoBehaviour
             transform.position = new Vector2(-1.94f, transform.position.y);
         }
 
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        hitPoints--;
+        if(hitPoints <= 0){
+            Destroy(gameObject);
+        }
     }
 }
