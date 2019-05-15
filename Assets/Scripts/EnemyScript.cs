@@ -9,6 +9,8 @@ public class EnemyScript : MonoBehaviour
     public bool move;
 
     public int HitPoints;
+
+    public GameObject SpeedUp;
     void Start()
     {
         
@@ -43,5 +45,6 @@ public class EnemyScript : MonoBehaviour
            Destroy(gameObject);
        }
    }
+   
    
 }

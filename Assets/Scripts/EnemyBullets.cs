@@ -26,7 +26,6 @@ public class EnemyBullets : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(GameObject.FindGameObjectWithTag("EnemyBullet"));
-        //Destroy(other.gameObject);
     }
 
 }
